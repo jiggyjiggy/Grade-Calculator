@@ -3,11 +3,11 @@ package org.example;
 import java.util.List;
 
 public class Courses {
+    private final List<Course> courseList;
+
     public Courses(List<Course> courseList) {
         this.courseList = courseList;
     }
-
-    private final List<Course> courseList;
 
     public double multipliedCreditAndCourseGrade() {
         double multipliedCreditAndCourseGrade = 0;
