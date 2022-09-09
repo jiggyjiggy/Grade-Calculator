@@ -10,11 +10,9 @@ public class Courses {
     }
 
     public double multipliedCreditAndCourseGrade() {
-        double multipliedCreditAndCourseGrade = 0;
-        for (Course course : courseList) {
-            multipliedCreditAndCourseGrade += course.multipliedCreditAndCourseGrade();
-        }
-        return multipliedCreditAndCourseGrade;
+        return courseList.stream()
+                .mapToDouble(Course::multipliedCreditAndCourseGrade)
+                .sum();
     }
 
     public int totalCompletedCredit() {
